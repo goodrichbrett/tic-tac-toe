@@ -1,0 +1,52 @@
+/* ---Square Color Palette---
+	purple: #7d3cff,
+	yellow: #f2d53c,
+	red: #c80e13,
+	background color (tan): #fceed1
+*/
+
+/* CSS Reset */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Game Board */
+
+.board {
+	width: 100vw;
+	height: 75vh;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+	width: 200px;
+	height: 200px;
+	background-color: #7d3cff;
+	border: solid 2px #fceed1;
+}
+
+/* End of Game Board CSS */
+
+body {
+	text-align: center;
+	background-color: #fceed1;
+}
+
+h1 {
+	margin-top: 30px;
+	color: #7d3cff;
+}
+
+p {
+	margin-top: 15px;
+	color: #7d3cff;
+}
+
+#resetButton {
+	margin-top: 20px;
+}
