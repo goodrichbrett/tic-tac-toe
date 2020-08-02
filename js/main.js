@@ -39,6 +39,11 @@ for (const square of squares) {
 init();
 
 function init() {
+	// remove all 'x' and 'o' classes
+	for (const square of squares) {
+		square.classList.remove("x");
+		square.classList.remove("o");
+	}
 	board = [null, null, null, null, null, null, null, null, null];
 	turn = 1;
 	winner = null;
@@ -68,7 +73,6 @@ function handleClick(e) {
 	turn *= -1;
 	winner = checkForWinner();
 	render();
-	console.log(e.target);
 }
 
 // Compares current board to winningCombos to decide if there is a winner
@@ -78,12 +82,4 @@ function checkForWinner() {
 
 // Render function:
 // Displays the current state of the board on the page, updating the elements to reflect either X or O depending on whose turn it is
-function render() {
-	// board.forEach(function (square, clickedSquareIdx) {
-	// 	if (turn === 1) {
-	// 		squares[clickedSquareIdx].classList.add("x");
-	// 	} else if (turn === -1) {
-	// 		squares[clickedSquareIdx].classList.add("o");
-	// 	}
-	// });
-}
+function render() {}
