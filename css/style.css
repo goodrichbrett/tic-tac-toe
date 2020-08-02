@@ -1,8 +1,8 @@
 /* Color Variables */
 :root {
-	--purple: #7d3cff;
-	--yellow: #f2d53c;
-	--red: #c80e13;
+	--blue: #00d2ff;
+	--yellow: #ccff2d;
+	--red: #ff2d2d;
 	--background: #fceed1;
 	--black: #545454;
 }
@@ -12,7 +12,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto Mono", monospace;
+	font-family: "Raleway", sans-serif;
 }
 
 h1 {
@@ -24,17 +24,17 @@ h1 {
 }
 
 #tac {
-	color: var(--purple);
+	color: var(--blue);
 }
 
 body {
 	display: grid;
 	justify-content: center;
-	background-color: var(--background);
+	background-color: white;
 }
 
 #wrapper {
-	background-color: var(--purple);
+	background-color: var(--blue);
 	border-radius: 50px;
 	margin: 50px;
 	padding: 50px;
@@ -43,16 +43,37 @@ body {
 #statusBar {
 	display: flex;
 	justify-content: space-around;
-	color: var(--background);
-	font-weight: bold;
+	color: var(--black);
+	font-size: 25px;
+	font-weight: 700;
+}
+
+#status {
+	font-size: 25px;
 }
 
 #resetButton {
 	cursor: pointer;
 }
 
+img {
+	color: var(--background);
+}
+
+#resetHover {
+	display: none;
+}
+
 #resetButton:hover {
 	color: var(--red);
+}
+
+#resetButton:hover #resetHover {
+	display: inline;
+}
+
+#resetButton:hover #resetDefault {
+	display: none;
 }
 
 .board {
@@ -61,14 +82,14 @@ body {
 	gap: 15px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-	background-color: var(--background);
+	background-color: var(--black);
 }
 
 .square {
 	cursor: pointer;
 	height: 200px;
 	width: 200px;
-	background-color: var(--purple);
+	background-color: var(--blue);
 }
 
 .x::after {
@@ -86,6 +107,7 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
 /* @media only screen and (max-width: 540px) {
 	#square {
 		width: 100px;
