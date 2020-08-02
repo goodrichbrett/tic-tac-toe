@@ -1,52 +1,100 @@
-/* ---Square Color Palette---
-	purple: #7d3cff,
-	yellow: #f2d53c,
-	red: #c80e13,
-	background color (tan): #fceed1
-*/
+/* Color Variables */
+:root {
+	--purple: #7d3cff;
+	--yellow: #f2d53c;
+	--red: #c80e13;
+	--background: #fceed1;
+	--black: #545454;
+}
 
 /* CSS Reset */
 * {
 	box-sizing: border-box;
-	padding: 0;
 	margin: 0;
-}
-
-/* Game Board */
-
-.board {
-	width: 100vw;
-	height: 75vh;
-	display: grid;
-	justify-content: center;
-	align-content: center;
-	grid-template-columns: repeat(3, auto);
-}
-
-.cell {
-	width: 200px;
-	height: 200px;
-	background-color: #7d3cff;
-	border: solid 2px #fceed1;
-}
-
-/* End of Game Board CSS */
-
-body {
-	text-align: center;
-	background-color: #fceed1;
+	padding: 0;
+	font-family: "Roboto Mono", monospace;
 }
 
 h1 {
-	margin-top: 30px;
-	color: #7d3cff;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 2.5rem;
+	color: var(--black);
 }
 
-p {
-	margin-top: 15px;
-	color: #7d3cff;
+#tac {
+	color: var(--purple);
+}
+
+body {
+	display: grid;
+	justify-content: center;
+	background-color: var(--background);
+}
+
+#wrapper {
+	background-color: var(--purple);
+	border-radius: 50px;
+	margin: 50px;
+	padding: 50px;
+}
+
+#statusBar {
+	display: flex;
+	justify-content: space-around;
+	color: var(--background);
+	font-weight: bold;
 }
 
 #resetButton {
-	margin-top: 20px;
+	cursor: pointer;
 }
+
+#resetButton:hover {
+	color: var(--red);
+}
+
+.board {
+	margin-top: 25px;
+	display: grid;
+	gap: 15px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	background-color: var(--background);
+}
+
+.square {
+	cursor: pointer;
+	height: 200px;
+	width: 200px;
+	background-color: var(--purple);
+}
+
+.x::after {
+	content: "♔";
+}
+
+.o::after {
+	content: "♕";
+}
+
+.x,
+.o {
+	font-size: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* @media only screen and (max-width: 540px) {
+	#square {
+		width: 100px;
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 800px) {
+	#square {
+		width: 400px;
+		height: 400px;
+	}
+} */
