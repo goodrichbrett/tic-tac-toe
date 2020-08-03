@@ -14,6 +14,6 @@ Full Tic-Tac-Toe game for anyone to play and enjoy.
 - If there is a tie, the game will end and display 'Tie Game!'
 - Play again by clicking the 'Reset' button
 
----
+
 _Made with HTML5, CSS3, and JavaScript_
 
