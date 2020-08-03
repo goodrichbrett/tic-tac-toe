@@ -130,9 +130,17 @@ function render() {
 	if (winner === 1) {
 		status.style.color = "#ccff2d";
 		status.innerText = "The King wins!";
+		status.className = "animated bounce";
+		setTimeout(function () {
+			status.classList.remove("animated", "bounce");
+		}, 1000);
 	} else if (winner === -1) {
 		status.style.color = "#ff2d2d";
 		status.innerText = "The Queen wins!";
+		status.className = "animated bounce";
+		setTimeout(function () {
+			status.classList.remove("animated", "bounce");
+		}, 1000);
 	} else if (winner === "T") {
 		status.style.color = "#545454";
 		status.innerText = "Tie game!";
